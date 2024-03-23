@@ -1,0 +1,6 @@
+@PocketPlanner_HostAddress = http://localhost:5076
+
+GET {{PocketPlanner_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
