@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\PocketPlanner.MigrationService\PocketPlanner.MigrationService.csproj" />
     <ProjectReference Include="..\PocketPlanner\PocketPlanner.csproj" />
   </ItemGroup>
 

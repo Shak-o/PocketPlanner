@@ -9,6 +9,7 @@ public class DebitCredit
     public string? Description { get; set; }
     public decimal? Amount { get; set; }
     public int UserId { get; set; }
+    public User? User { get; set; }
     public DateTime? RepeatsAt { get; set; }
     public int IsRepeating { get; set; }
     public RepeatEvery? RepeatsEvery { get; set; }

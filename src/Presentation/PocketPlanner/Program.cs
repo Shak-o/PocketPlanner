@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using PocketPlanner.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
@@ -9,6 +12,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.AddSqlServerDbContext<PocketPlannerContext>("PocketPlannerDb", configureDbContextOptions: options =>
+{
+    options.UseSqlServer(sqlServerOptions =>
+    {
+        sqlServerOptions.MigrationsAssembly("PocketPlanner.Persistence");
+    });
+});
 var app = builder.Build();
 
 app.MapDefaultEndpoints();

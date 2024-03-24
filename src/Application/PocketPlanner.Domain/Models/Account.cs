@@ -9,4 +9,5 @@ public class Account
     public required string PasswordHash { get; set; }
     public DateTime ValidTill { get; set; }
     public int UserId { get; set; }
+    public User? User { get; set; }
 }
