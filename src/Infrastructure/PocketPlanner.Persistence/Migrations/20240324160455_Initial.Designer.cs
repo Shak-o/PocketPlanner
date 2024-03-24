@@ -12,7 +12,7 @@ using PocketPlanner.Persistence;
 namespace PocketPlanner.Persistence.Migrations
 {
     [DbContext(typeof(PocketPlannerContext))]
-    [Migration("20240324082213_Initial")]
+    [Migration("20240324160455_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -38,10 +38,10 @@ namespace PocketPlanner.Persistence.Migrations
                         .HasMaxLength(6000)
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Salt")
+                    b.Property<byte[]>("Salt")
                         .IsRequired()
                         .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("varbinary(500)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");

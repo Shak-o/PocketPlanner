@@ -35,10 +35,10 @@ namespace PocketPlanner.Persistence.Migrations
                         .HasMaxLength(6000)
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Salt")
+                    b.Property<byte[]>("Salt")
                         .IsRequired()
                         .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("varbinary(500)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");

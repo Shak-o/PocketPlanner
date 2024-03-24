@@ -1,6 +1,6 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var sqlServer = builder.AddSqlServer("PocketPlannerDbConnection", "Aa123456").AddDatabase("PocketPlannerDb");
+var sqlServer = builder.AddSqlServer("PocketPlannerDbConnection", "Aa123456", 24242).AddDatabase("PocketPlannerDb");
 var pocketPlanner = builder.AddProject<Projects.PocketPlanner>("pocketplanner")
     .WithReference(sqlServer);
 var migrations = builder.AddProject<Projects.PocketPlanner_MigrationService>("pocketplannermigrations")
