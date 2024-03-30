@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\PocketPlanner.MigrationService\PocketPlanner.MigrationService.csproj" />
+    <ProjectReference Include="..\PocketPlannerWeb\PocketPlannerWeb.csproj" />
     <ProjectReference Include="..\PocketPlanner\PocketPlanner.csproj" />
   </ItemGroup>
 
